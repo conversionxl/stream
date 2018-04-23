@@ -1,5 +1,5 @@
 {
-  "name": "xwp/stream",
+  "name": "plugins/stream",
   "description": "Track WordPress user and system actions for debugging, logging and compliance purposes",
   "homepage": "https://wordpress.org/plugins/stream/",
   "type": "wordpress-plugin",
@@ -72,6 +72,8 @@
     ],
     "test-report": [
       "php-coveralls --verbose"
-    ]
+    ],
+    "deploy": "dep deploy -o application=$(composer config name) cxl.com",
+    "rollback": "dep rollback -o application=$(composer config name) cxl.com"
   }
 }
